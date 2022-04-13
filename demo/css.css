@@ -1,0 +1,35 @@
+.someClass {
+  font-family: "Helvetica Neue", Roboto, sans-serif;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 1px 0, inset rgba(255, 255, 255, 0.16) 0 1px 0;
+}
+
+#someID {
+  background: yellow;
+}
+
+main {
+  margin-top: 20px;
+  background: url(http://localhost/8bcLQqF.png)
+}
+
+.navbar-nav > li > a, .navbar-brand {
+  color: #fff !important;
+}
+
+form input[type="text"] {
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/* Comments */
+@media (max-width: 1270px) and (min-width: 192px) {
+  .someClass:hover {
+    position: static !important;
+  }
+
+  .someClass::after {
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+  }
+}
