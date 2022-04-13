@@ -145,9 +145,9 @@ M.apply_links = function()
 
 
   -- UI: Netrw
-  link('Directory',    'Function')
-  link('netrwDir',     'Function')
-  link('netrwHelpCmd', 'Special')
+  link('Directory',     'Function')
+  link('netrwDir',      'Function')
+  link('netrwHelpCmd',  'Special')
   link('netrwMarkFile', 'Search')
 
 
@@ -347,6 +347,10 @@ end
 
 M.gui = function(str)
   return {gui = str, cterm = 'NONE'}
+end
+
+M.set_hl = function(group, style)
+  vim.api.nvim_set_hl(0, group, style)
 end
 
 M.link = link
