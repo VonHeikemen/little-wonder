@@ -162,6 +162,10 @@ M.apply_links = function()
   link('NERDTreeHelp',      'Comment')
 
 
+  -- Plugin: lir.nvim
+  link('LirDir', 'Function')
+
+
   -- Language: HTML
   -- Syntax: built-in
   link('htmlTag',            'Special')
