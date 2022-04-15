@@ -11,7 +11,7 @@ Inspired by the same premise of the [alabaster color scheme](https://github.com/
 
 ## Getting Started
 
-Make sure you have Neovim v0.7 or greater.
+Make sure you have [Neovim v0.7.0](https://github.com/neovim/neovim/releases/tag/v0.7.0) or greater.
 
 ### Installation
 
