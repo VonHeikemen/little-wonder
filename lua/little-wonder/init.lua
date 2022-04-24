@@ -89,7 +89,7 @@ M.ui = function(theme)
   hi('CursorLine',   {fg = none,            bg = theme.cursorline   })
   hi('CursorLineNr', {fg = none,            bg = BG                 })
   hi('ColorColumn',  {fg = none,            bg = theme.colorcolumn  })
-  hi('LineNr',       {fg = theme.line_nr,   bg = BG                 })
+  hi('LineNr',       {fg = theme.line_nr,   bg = none               })
   hi('NonText',      {fg = theme.line_nr,   bg = BG                 })
   hi('EndOfBuffer',  {fg = theme.dark_text, bg = BG                 })
   hi('VertSplit',    {fg = theme.line_bg,   bg = BG                 })
@@ -113,15 +113,23 @@ M.ui = function(theme)
   hi('ErrorMsg',   {fg = theme.error,   bg = none})
   hi('WarningMsg', {fg = theme.warning, bg = none})
 
-  hi('DiagnosticSignError', {fg = theme.error,   bg = none})
-  hi('DiagnosticSignWarn',  {fg = theme.warning, bg = none})
-  hi('DiagnosticSignInfo',  {fg = theme.info,    bg = none})
-  hi('DiagnosticSignHint',  {fg = FG,            bg = none})
+  hi('DiagnosticError', {fg = theme.error,   bg = none})
+  hi('DiagnosticWarn',  {fg = theme.warning, bg = none})
+  hi('DiagnosticInfo',  {fg = theme.info,    bg = none})
+  hi('DiagnosticHint',  {fg = FG,            bg = none})
 
   hs('DiagnosticUnderlineError', {fg = theme.error,   bg = none}, underline)
   hs('DiagnosticUnderlineWarn',  {fg = theme.warning, bg = none}, underline)
   hs('DiagnosticUnderlineInfo',  {fg = theme.info,    bg = none}, underline)
   hs('DiagnosticUnderlineHint',  {fg = FG,            bg = none}, underline)
+
+
+  hi('NotifyWARNIcon',    {fg = theme.warning, bg = none})
+  hi('NotifyWARNBorder',  {fg = theme.warning, bg = none})
+  hi('NotifyWARNTitle',   {fg = theme.warning, bg = none})
+  hi('NotifyERRORIcon',   {fg = theme.error,   bg = none})
+  hi('NotifyERRORBorder', {fg = theme.error,   bg = none})
+  hi('NotifyERRORTitle',  {fg = theme.error,   bg = none})
 end
 
 M.apply_links = function()
@@ -134,14 +142,18 @@ M.apply_links = function()
 
 
   -- UI: Diagnostic
-  link('DiagnosticFloatingError', 'DiagnosticSignError')
-  link('DiagnosticFloatingWarn',  'DiagnosticSignWarn')
-  link('DiagnosticFloatingInfo',  'DiagnosticSignInfo')
-  link('DiagnosticFloatingHint',  'DiagnosticSignHint')
-  link('DiagnosticVirtualTextError', 'DiagnosticSignError')
-  link('DiagnosticVirtualTextWarn',  'DiagnosticSignWarn')
-  link('DiagnosticVirtualTextInfo',  'DiagnosticSignInfo')
-  link('DiagnosticVirtualTextHint',  'DiagnosticSignHint')
+  link('DiagnosticSignError', 'DiagnosticError')
+  link('DiagnosticSignWarn',  'DiagnosticWarn')
+  link('DiagnosticSignInfo',  'DiagnosticInfo')
+  link('DiagnosticSignHint',  'DiagnosticHint')
+  link('DiagnosticFloatingError', 'DiagnosticError')
+  link('DiagnosticFloatingWarn',  'DiagnosticWarn')
+  link('DiagnosticFloatingInfo',  'DiagnosticInfo')
+  link('DiagnosticFloatingHint',  'DiagnosticHint')
+  link('DiagnosticVirtualTextError', 'DiagnosticError')
+  link('DiagnosticVirtualTextWarn',  'DiagnosticWarn')
+  link('DiagnosticVirtualTextInfo',  'DiagnosticInfo')
+  link('DiagnosticVirtualTextHint',  'DiagnosticHint')
 
 
   -- UI: Netrw
