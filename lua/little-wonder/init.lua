@@ -1,7 +1,7 @@
 local M = {}
 
 local none = {gui = 'NONE',    cterm = 'NONE'}
-local FG   = {gui = '#DCE0DD', cterm = '253' }
+local FG   = {gui = '#DCE0DD', cterm = 253   }
 local BG = none
 
 local hs = function(group, colors, style)
