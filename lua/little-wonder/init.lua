@@ -189,38 +189,38 @@ M.apply_links = function()
   link('htmlEndTag',         'Special')
   link('htmlTagName',        'Function')
   link('htmlSpecialTagName', 'Function')
-  link('htmlArg',            lw_normal)
+  link('htmlArg',            lw_none)
 
 
   -- Language: CSS
   -- Syntax: built-in
   link('cssTagName',           'Function')
   link('cssColor',             'Number')
-  link('cssVendor',            lw_normal)
-  link('cssBraces',            lw_normal)
-  link('cssSelectorOp',        lw_normal)
-  link('cssSelectorOp2',       lw_normal)
-  link('cssIdentifier',        lw_normal)
-  link('cssClassName',         lw_normal)
-  link('cssClassNameDot',      lw_normal)
-  link('cssVendor',            lw_normal)
-  link('cssImportant',         lw_normal)
-  link('cssAttributeSelector', lw_normal)
+  link('cssVendor',            lw_none)
+  link('cssBraces',            lw_none)
+  link('cssSelectorOp',        lw_none)
+  link('cssSelectorOp2',       lw_none)
+  link('cssIdentifier',        lw_none)
+  link('cssClassName',         lw_none)
+  link('cssClassNameDot',      lw_none)
+  link('cssVendor',            lw_none)
+  link('cssImportant',         lw_none)
+  link('cssAttributeSelector', lw_none)
 
 
   -- Language: PHP
   -- Syntax: built-in
   link('phpNullValue', 'Boolean')
-  link('phpParent',    lw_normal)
-  link('phpClasses',   lw_normal)
+  link('phpParent',    lw_none)
+  link('phpClasses',   lw_none)
 
 
   -- Language: Javascript
   -- Syntax: built-in
   link('javaScriptNumber',   'Number')
   link('javaScriptNull',     'Number')
-  link('javaScriptBraces',   lw_normal)
-  link('javaScriptFunction', lw_normal)
+  link('javaScriptBraces',   lw_none)
+  link('javaScriptFunction', lw_none)
 
 
   -- Language: Javascript
@@ -228,9 +228,9 @@ M.apply_links = function()
   link('jsFunctionKey', 'Function')
   link('jsUndefined',   'Number')
   link('jsNull',        'Number')
-  link('jsSuper',       lw_normal)
-  link('jsThis',        lw_normal)
-  link('jsArguments',   lw_normal)
+  link('jsSuper',       lw_none)
+  link('jsThis',        lw_none)
+  link('jsArguments',   lw_none)
 
 
   -- Language: JSX
@@ -258,15 +258,15 @@ M.apply_links = function()
 
   -- Python
   link('pythonDecorator',     'Special')
-  link('pythonDecoratorName', lw_normal)
-  link('pythonBuiltin',       lw_normal)
+  link('pythonDecoratorName', lw_none)
+  link('pythonBuiltin',       lw_none)
 
   -- Treesitter
   link('TSConstructor',     lw_none)
-  link('TSVariableBuiltin', lw_normal)
+  link('TSVariableBuiltin', lw_none)
   link('TSConstBuiltin',    'Number')
   link('TSFuncBuiltin',     'Function')
-  link('luaTSPunctBracket', lw_normal)
+  link('luaTSPunctBracket', lw_none)
 end
 
 M.terminal = function(theme)
