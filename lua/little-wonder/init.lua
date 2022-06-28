@@ -3,6 +3,8 @@ local M = {}
 local none = {gui = 'NONE',    cterm = 'NONE'}
 local FG   = {gui = '#DCE0DD', cterm = 253   }
 local BG = none
+local lw_normal = 'LittleWonderNormal'
+local lw_none = 'LittleWonderNone'
 
 local hs = function(group, colors, style)
   local opts = {
@@ -42,6 +44,9 @@ end
 
 M.base_syntax = function(theme)
   local ebg = theme.error_bg or none
+
+  hi(lw_none,   {fg = none, bg = none})
+  hi(lw_normal, {fg = FG,   bg = none})
 
   hi('Normal',      {fg = FG,             bg = BG  })
   hi('Comment',     {fg = theme.comment,  bg = none})
@@ -184,38 +189,38 @@ M.apply_links = function()
   link('htmlEndTag',         'Special')
   link('htmlTagName',        'Function')
   link('htmlSpecialTagName', 'Function')
-  link('htmlArg',            'Normal')
+  link('htmlArg',            lw_normal)
 
 
   -- Language: CSS
   -- Syntax: built-in
   link('cssTagName',           'Function')
   link('cssColor',             'Number')
-  link('cssVendor',            'Normal')
-  link('cssBraces',            'Normal')
-  link('cssSelectorOp',        'Normal')
-  link('cssSelectorOp2',       'Normal')
-  link('cssIdentifier',        'Normal')
-  link('cssClassName',         'Normal')
-  link('cssClassNameDot',      'Normal')
-  link('cssVendor',            'Normal')
-  link('cssImportant',         'Normal')
-  link('cssAttributeSelector', 'Normal')
+  link('cssVendor',            lw_normal)
+  link('cssBraces',            lw_normal)
+  link('cssSelectorOp',        lw_normal)
+  link('cssSelectorOp2',       lw_normal)
+  link('cssIdentifier',        lw_normal)
+  link('cssClassName',         lw_normal)
+  link('cssClassNameDot',      lw_normal)
+  link('cssVendor',            lw_normal)
+  link('cssImportant',         lw_normal)
+  link('cssAttributeSelector', lw_normal)
 
 
   -- Language: PHP
   -- Syntax: built-in
   link('phpNullValue', 'Boolean')
-  link('phpParent',    'Normal')
-  link('phpClasses',   'Normal')
+  link('phpParent',    lw_normal)
+  link('phpClasses',   lw_normal)
 
 
   -- Language: Javascript
   -- Syntax: built-in
   link('javaScriptNumber',   'Number')
   link('javaScriptNull',     'Number')
-  link('javaScriptBraces',   'Normal')
-  link('javaScriptFunction', 'Normal')
+  link('javaScriptBraces',   lw_normal)
+  link('javaScriptFunction', lw_normal)
 
 
   -- Language: Javascript
@@ -223,9 +228,9 @@ M.apply_links = function()
   link('jsFunctionKey', 'Function')
   link('jsUndefined',   'Number')
   link('jsNull',        'Number')
-  link('jsSuper',       'Normal')
-  link('jsThis',        'Normal')
-  link('jsArguments',   'Normal')
+  link('jsSuper',       lw_normal)
+  link('jsThis',        lw_normal)
+  link('jsArguments',   lw_normal)
 
 
   -- Language: JSX
@@ -235,7 +240,7 @@ M.apply_links = function()
   link('jsxPunct',         'Special')
   link('jsxCloseString',   'Special')
   link('jsxEqual',         'Special')
-  link('jsxAttrib',        'Normal')
+  link('jsxAttrib',        lw_none)
 
 
   -- Language: Twig
@@ -253,15 +258,15 @@ M.apply_links = function()
 
   -- Python
   link('pythonDecorator',     'Special')
-  link('pythonDecoratorName', 'Normal')
-  link('pythonBuiltin',       'Normal')
+  link('pythonDecoratorName', lw_normal)
+  link('pythonBuiltin',       lw_normal)
 
   -- Treesitter
-  link('TSConstructor',     'Normal')
-  link('TSVariableBuiltin', 'Normal')
+  link('TSConstructor',     lw_none)
+  link('TSVariableBuiltin', lw_normal)
   link('TSConstBuiltin',    'Number')
   link('TSFuncBuiltin',     'Function')
-  link('luaTSPunctBracket', 'Normal')
+  link('luaTSPunctBracket', lw_normal)
 end
 
 M.terminal = function(theme)
