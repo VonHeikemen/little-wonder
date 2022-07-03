@@ -11,6 +11,7 @@ local color = {
   orange         = {gui = '#F9AE58', cterm = 215},
   gray           = {gui = '#A6ACB9', cterm = 145},
   bright_gray    = {gui = '#46505B', cterm = 239},
+  space_gray     = {gui = '#3D4752', cterm = 239},
   dark_gray      = {gui = '#2F353C', cterm = 235},
   light_gray     = {gui = '#939393', cterm = 238},
   dark_blue      = {gui = '#4E5A65', cterm = 240},
@@ -37,7 +38,7 @@ local theme = function()
       error_bg = nil
     },
     ui = {
-      cursorline    = color.bright_gray,
+      cursorline    = color.space_gray,
       selection     = color.bright_gray,
       colorcolumn   = color.dark_blue,
       dark_text     = color.silver,
