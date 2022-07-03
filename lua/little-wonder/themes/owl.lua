@@ -78,6 +78,7 @@ end
 
 return {
   get = theme,
-  update = update
+  update = update,
+  palette = function() return color end
 }
 
