@@ -233,6 +233,14 @@ M.apply_links = function()
   link('jsArguments',   lw_none)
 
 
+  -- Language: Typescript
+  -- Syntax: built-in
+  link('typescriptImport', lw_none)
+  link('typescriptExport', lw_none)
+  link('typescriptBraces', lw_none)
+  link('typescriptDecorator', lw_none)
+
+
   -- Language: JSX
   -- Syntax: 'maxmellon/vim-jsx-pretty'
   link('jsxTagName',       'Function')
@@ -256,6 +264,14 @@ M.apply_links = function()
   link('rubyMagicComment',     'Comment')
   link('rubyHeredocDelimiter', 'Special')
 
+
+  -- Language: V
+  -- Syntax: 'ollykel/v-vim'
+  link('vFunctionCall', 'Function')
+  link('vBuiltins', 'Function')
+  link('vStringVar', lw_none)
+  link('vType', lw_none)
+
   -- Python
   link('pythonDecorator',     'Special')
   link('pythonDecoratorName', lw_none)
@@ -267,6 +283,7 @@ M.apply_links = function()
   link('TSConstBuiltin',    'Number')
   link('TSFuncBuiltin',     'Function')
   link('luaTSPunctBracket', lw_none)
+  link('TSKeywordFunction', lw_none)
 end
 
 M.terminal = function(theme)
