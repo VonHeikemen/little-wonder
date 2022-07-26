@@ -182,6 +182,9 @@ M.apply_links = function()
   -- Plugin: lir.nvim
   link('LirDir', 'Function')
 
+  -- Language: lua
+  -- Syntax: built-in
+  link('luaFunction', lw_none)
 
   -- Language: HTML
   -- Syntax: built-in
