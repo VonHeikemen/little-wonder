@@ -184,7 +184,7 @@ M.apply_links = function()
 
   -- Language: lua
   -- Syntax: built-in
-  link('luaFunction', lw_none)
+  link('luaFunction', 'Function')
 
   -- Language: HTML
   -- Syntax: built-in
@@ -242,6 +242,8 @@ M.apply_links = function()
   link('typescriptExport', lw_none)
   link('typescriptBraces', lw_none)
   link('typescriptDecorator', lw_none)
+  link('typescriptParens', lw_none)
+  link('typescriptCastKeyword', lw_none)
 
 
   -- Language: JSX
@@ -280,13 +282,25 @@ M.apply_links = function()
   link('pythonDecoratorName', lw_none)
   link('pythonBuiltin',       lw_none)
 
-  -- Treesitter
+  -- Treesitter (old highlight groups)
   link('TSConstructor',     lw_none)
   link('TSVariableBuiltin', lw_none)
   link('TSConstBuiltin',    'Number')
   link('TSFuncBuiltin',     'Function')
   link('luaTSPunctBracket', lw_none)
   link('TSKeywordFunction', lw_none)
+
+  -- Treesitter
+  link('@function.call', 'Function')
+  link('@function.builtin', 'Function')
+  link('@punctuation.bracket', lw_none)
+  link('@constant.builtin', 'Number')
+  link('@constructor', lw_none)
+  link('@type.css', 'Function')
+  link('@constructor.php', 'Function')
+  link('@tag.vue', 'Function')
+  link('@method.vue', lw_none)
+  link('@tag.delimiter.vue', 'Special')
 end
 
 M.terminal = function(theme)
