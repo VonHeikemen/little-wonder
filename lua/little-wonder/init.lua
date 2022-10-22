@@ -184,7 +184,7 @@ M.apply_links = function()
 
   -- Language: lua
   -- Syntax: built-in
-  link('luaFunction', 'Function')
+  link('luaFunction', lw_none)
 
   -- Language: HTML
   -- Syntax: built-in
