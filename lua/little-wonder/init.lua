@@ -298,9 +298,10 @@ M.apply_links = function()
   link('@constructor', lw_none)
   link('@type.css', 'Function')
   link('@constructor.php', 'Function')
-  link('@tag.vue', 'Function')
   link('@method.vue', lw_none)
-  link('@tag.delimiter.vue', 'Special')
+  link('@tag.delimiter', 'Special')
+  link('@tag.attribute', lw_none)
+  link('@tag', 'Function')
 end
 
 M.terminal = function(theme)
