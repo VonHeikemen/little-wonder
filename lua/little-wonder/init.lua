@@ -138,6 +138,9 @@ M.ui = function(theme)
 end
 
 M.apply_links = function()
+  -- UI: search
+  link('CurSearch', 'IncSearch')
+
   -- UI: window
   link('FloatBorder', 'Normal')
 
