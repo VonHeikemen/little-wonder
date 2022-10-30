@@ -307,6 +307,12 @@ M.apply_links = function()
   link('@tag', 'Function')
 end
 
+M.custom_groups = function(groups)
+  for group, style in pairs(groups) do
+    M.highlight(group, style.fg or {}, style.bg or {})
+  end
+end
+
 M.terminal = function(theme)
   vim.g.terminal_color_foreground = FG.gui
   vim.g.terminal_color_background = BG.gui
@@ -362,6 +368,9 @@ M.apply = function(name, theme)
   M.base_syntax(theme.syntax)
   M.apply_links()
   M.terminal(theme.terminal)
+  if theme.groups then
+    M.custom_groups(theme.groups)
+  end
 end
 
 M.highlight = function(group, style, bg)
