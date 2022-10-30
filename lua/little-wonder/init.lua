@@ -138,6 +138,12 @@ M.ui = function(theme)
 end
 
 M.apply_links = function()
+  -- UI: Diff
+  link('DiffAdd',    'DiagnosticWarn')
+  link('DiffChange', 'DiagnosticInfo')
+  link('DiffDelete', 'DiagnosticError')
+  link('DiffText',   'Visual')
+
   -- UI: search
   link('CurSearch', 'IncSearch')
 
