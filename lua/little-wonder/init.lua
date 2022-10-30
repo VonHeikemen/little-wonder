@@ -425,6 +425,7 @@ end
 
 M.link = link
 M.NONE = none
+M.no_color = lw_none
 
 return M
 
