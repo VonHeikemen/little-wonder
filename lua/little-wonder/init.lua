@@ -286,6 +286,13 @@ M.apply_links = function()
   link('vStringVar', lw_none)
   link('vType', lw_none)
 
+
+  -- Language: Nelua
+  -- Syntax: 'stefanos82/nelua.vim'
+  link('neluaFunc', 'Function')
+  link('neluaFunction', lw_none)
+
+
   -- Python
   link('pythonDecorator',     'Special')
   link('pythonDecoratorName', lw_none)
