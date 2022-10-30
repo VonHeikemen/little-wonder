@@ -1,6 +1,6 @@
 local color = {
   white   = {gui = '#C0CAF5', cterm = 153},
-  black   = {gui = '#1A1B26', cterm = 234},
+  black   = {gui = '#24283B', cterm = 235},
   green   = {gui = '#9ECE6A', cterm = 149},
   blue    = {gui = '#7AA2F7', cterm = 111},
   cyan    = {gui = '#73DACA', cterm = 80 },
@@ -8,10 +8,11 @@ local color = {
   magenta = {gui = '#BB9AF7', cterm = 141},
   yellow  = {gui = '#E0AF68', cterm = 179},
 
-  bright_black  = {gui = '#15161E', cterm = 233},
+  bright_black  = {gui = '#1F2335', cterm = 234},
   bright_white  = {gui = '#DADFE1', cterm = 253},
   bright_blue   = {gui = '#3D59A1', cterm = 62 },
   blue_two      = {gui = '#3B4261', cterm = 239},
+  blue_three    = {gui = '#364A82', cterm = 239},
   gray_two      = {gui = '#222229', cterm = 235},
 
   gray       = {gui = '#565F89', cterm = 60},
@@ -37,7 +38,7 @@ local theme = function()
     },
     ui = {
       cursorline    = color.light_gray,
-      selection     = color.light_gray,
+      selection     = color.blue_three,
       colorcolumn   = color.bright_black,
       dark_text     = color.dark_gray,
       line_nr       = color.dark_gray,
