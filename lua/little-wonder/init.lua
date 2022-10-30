@@ -314,8 +314,8 @@ M.apply_links = function()
 end
 
 M.custom_groups = function(groups)
-  for group, style in pairs(groups) do
-    M.highlight(group, style.fg or {}, style.bg or {})
+  for group, params in pairs(groups) do
+    M.highlight(group, params.fg or {}, params.bg or {}, params.style or {})
   end
 end
 
@@ -379,19 +379,19 @@ M.apply = function(name, theme)
   end
 end
 
-M.highlight = function(group, style, bg)
+M.highlight = function(group, fg, bg, style)
   local opts = {}
 
-  if style.gui then
-    opts.fg = style.gui
+  if fg.gui then
+    opts.fg = fg.gui
   end
 
-  if style.cterm then
-    opts.ctermfg = style.cterm
+  if fg.cterm then
+    opts.ctermfg = fg.cterm
   end
 
-  if type(style.style) == 'table' and style.style then
-    for _, item in ipairs(style.style) do
+  if type(style) == 'table' then
+    for _, item in ipairs(style) do
       opts[item] = true
     end
   end
