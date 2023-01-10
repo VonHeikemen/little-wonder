@@ -223,6 +223,7 @@ M.apply_links = function()
   -- Language: PHP
   -- Syntax: built-in
   link('phpNullValue', 'Boolean')
+  link('phpSpecialFunction',   'Function')
   link('phpParent',    lw_none)
   link('phpClasses',   lw_none)
 
@@ -268,6 +269,7 @@ M.apply_links = function()
   -- Language: Twig
   -- Syntax: 'lumiliet/vim-twig'
   link('twigString', 'String')
+  link('twigOperator', lw_none)
 
 
   -- Language: Ruby
@@ -318,6 +320,7 @@ M.apply_links = function()
   link('@tag.delimiter', 'Special')
   link('@tag.attribute', lw_none)
   link('@tag', 'Function')
+  link('@text.uri.html', 'String')
 end
 
 M.custom_groups = function(groups)
