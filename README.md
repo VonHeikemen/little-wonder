@@ -178,9 +178,9 @@ local theme = {
   },
   terminal = {
     white        = color.white.gui,
-    bright_white = color.bright_white.gui
+    bright_white = color.bright_white.gui,
     black        = color.black.gui,
-    bright_black = color.bright_black.gui
+    bright_black = color.bright_black.gui,
     red          = color.red.gui,
     green        = color.green.gui,
     blue         = color.blue.gui,
@@ -203,7 +203,7 @@ That's it. A "theme" is actually just a lua table.
 
 ## Support
 
-If you find this useful and want to support my efforts, [buy me a coffee ☕](https://www.buymeacoffee.com/vonheikemen).
+If you find this project useful and want to support my efforts, you can donate in [ko-fi.com/vonheikemen](https://ko-fi.com/vonheikemen).
 
-[![buy me a coffee](https://res.cloudinary.com/vonheikemen/image/upload/v1618466522/buy-me-coffee_ah0uzh.png)](https://www.buymeacoffee.com/vonheikemen)
+[![buy me a coffee](https://res.cloudinary.com/vonheikemen/image/upload/v1726766343/gzu1l1mx3ou7jmp0tkvt.webp)](https://ko-fi.com/vonheikemen)
 
