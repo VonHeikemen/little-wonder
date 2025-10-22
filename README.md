@@ -17,10 +17,10 @@ Make sure you have [Neovim v0.7.0](https://github.com/neovim/neovim/releases/tag
 
 Use your favorite plugin manager. For example.
 
-With `packer`:
+With `mini.deps`:
 
 ```lua
-use {'VonHeikemen/little-wonder'}
+MiniDeps.add('VonHeikemen/little-wonder')
 ```
 
 With `vim-plug`:
